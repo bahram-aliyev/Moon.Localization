@@ -1,1 +1,3 @@
-# moon.localization
+# Moon.Localization
+
+Simple localization for .NET applications
