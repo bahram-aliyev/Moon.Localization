@@ -2,7 +2,7 @@
     "version": "1.0.0-ci",
     "authors": [ "Dusan Janosik" ],
     "owners": [ "djanosik" ],
-    "projectUrl": "https://github.com/djanosik/moon.localization",
+    "projectUrl": "https://github.com/djanosik/Moon.Localization",
     "iconUrl": "http://moontea.net/moon.png",
     "description": "Simple localization for .NET / DNX applications.",
     "tags": [ "moontea", "localization" ],
