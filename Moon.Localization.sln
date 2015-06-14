@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Moon.Localization", "src\Moon.Localization\Moon.Localization.xproj", "{2A565A3B-3A8F-4910-8894-ED6FEDD9B755}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Moon.Localization.Tests", "test\Moon.Localization.Tests\Moon.Localization.Tests.xproj", "{A0D961C2-2818-4C12-A8DF-FEE5222CD2C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "global", "global", "{BB3833BF-AACA-4F93-AB76-A73AD3D90C3F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		appveyor.yml = appveyor.yml
+		build.cmd = build.cmd
+		build.fsx = build.fsx
+		global.json = global.json
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{812E7553-DA26-4ACC-B876-2423BDFDD88B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0CDB77BB-4DDC-4D58-927E-9965A9FAF5E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A565A3B-3A8F-4910-8894-ED6FEDD9B755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A565A3B-3A8F-4910-8894-ED6FEDD9B755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A565A3B-3A8F-4910-8894-ED6FEDD9B755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A565A3B-3A8F-4910-8894-ED6FEDD9B755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0D961C2-2818-4C12-A8DF-FEE5222CD2C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D961C2-2818-4C12-A8DF-FEE5222CD2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D961C2-2818-4C12-A8DF-FEE5222CD2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D961C2-2818-4C12-A8DF-FEE5222CD2C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2A565A3B-3A8F-4910-8894-ED6FEDD9B755} = {812E7553-DA26-4ACC-B876-2423BDFDD88B}
+		{A0D961C2-2818-4C12-A8DF-FEE5222CD2C4} = {0CDB77BB-4DDC-4D58-927E-9965A9FAF5E4}
+	EndGlobalSection
+EndGlobal
