@@ -865,6 +865,70 @@
         "lib/dnxcore50/Microsoft.Framework.TestHost.xml"
       ]
     },
+    "Moon.Collections/1.0.7": {
+      "serviceable": true,
+      "sha": "GXiZ4vyQjQ5WbHAwj8aPcN+K2f++lNd2Vj//20N8/FfpOOpTosu1IBgLaeYand7C7NOdUI0zI4TDP4joUDcG9A==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Moon.Collections.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Moon.Collections.dll"
+          ]
+        },
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/net451/Moon.Collections.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net451/Moon.Collections.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7",
+            "System.Collections": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Moon.Collections.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Moon.Collections.dll"
+          ]
+        }
+      },
+      "files": [
+        "Moon.Collections.1.0.7.nupkg",
+        "Moon.Collections.1.0.7.nupkg.sha512",
+        "Moon.Collections.nuspec",
+        "lib/dnx451/Moon.Collections.dll",
+        "lib/dnx451/Moon.Collections.xml",
+        "lib/dnxcore50/Moon.Collections.dll",
+        "lib/dnxcore50/Moon.Collections.xml",
+        "lib/net451/Moon.Collections.dll",
+        "lib/net451/Moon.Collections.xml"
+      ]
+    },
     "Moon.Contracts/1.0.7": {
       "serviceable": true,
       "sha": "5erL8CbOqek8/OdWbsLmbQ3hCrdpwHsVHgA4yXnVP3hQjalG9XloKQe6nGQ6A3Gin9iD927hm184K0zttkXAUw==",

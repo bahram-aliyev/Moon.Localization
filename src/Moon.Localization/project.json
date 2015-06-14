@@ -7,14 +7,15 @@
     "description": "Simple localization for .NET / DNX applications.",
     "tags": [ "moontea", "localization" ],
     "dependencies": {
-        "Moon.Runtime": "1.0.7"
+        "Moon.Collections": "1.0.7"
     },
     "frameworks": {
         "net451": { },
         "dnx451": { },
         "dnxcore50": {
             "dependencies": {
-                "System.Globalization": "4.0.10-beta-22816"
+                "System.Globalization": "4.0.10-beta-22816",
+                "System.Collections.Concurrent": "4.0.10-beta-22816"
             }
         }
     }

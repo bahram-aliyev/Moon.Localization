@@ -3,15 +3,80 @@
   "version": -9998,
   "projectFileDependencyGroups": {
     "": [
-      "Moon.Runtime >= 1.0.7"
+      "Moon.Collections >= 1.0.7"
     ],
     ".NETFramework,Version=v4.5.1": [],
     "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": [
-      "System.Globalization >= 4.0.10-beta-22816"
+      "System.Globalization >= 4.0.10-beta-22816",
+      "System.Collections.Concurrent >= 4.0.10-beta-22816"
     ]
   },
   "libraries": {
+    "Moon.Collections/1.0.7": {
+      "serviceable": true,
+      "sha": "GXiZ4vyQjQ5WbHAwj8aPcN+K2f++lNd2Vj//20N8/FfpOOpTosu1IBgLaeYand7C7NOdUI0zI4TDP4joUDcG9A==",
+      "frameworks": {
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/net451/Moon.Collections.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net451/Moon.Collections.dll"
+          ]
+        },
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Moon.Collections.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Moon.Collections.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7",
+            "System.Collections": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Moon.Collections.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Moon.Collections.dll"
+          ]
+        }
+      },
+      "files": [
+        "Moon.Collections.1.0.7.nupkg",
+        "Moon.Collections.1.0.7.nupkg.sha512",
+        "Moon.Collections.nuspec",
+        "lib/dnx451/Moon.Collections.dll",
+        "lib/dnx451/Moon.Collections.xml",
+        "lib/dnxcore50/Moon.Collections.dll",
+        "lib/dnxcore50/Moon.Collections.xml",
+        "lib/net451/Moon.Collections.dll",
+        "lib/net451/Moon.Collections.xml"
+      ]
+    },
     "Moon.Contracts/1.0.7": {
       "serviceable": true,
       "sha": "5erL8CbOqek8/OdWbsLmbQ3hCrdpwHsVHgA4yXnVP3hQjalG9XloKQe6nGQ6A3Gin9iD927hm184K0zttkXAUw==",
@@ -195,6 +260,67 @@
         "lib/contract/System.Collections.dll",
         "lib/net45/System.Collections.dll",
         "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Collections.dll"
+      ]
+    },
+    "System.Collections.Concurrent/4.0.10-beta-22816": {
+      "serviceable": false,
+      "sha": "mI2+5S3DG07KCur+L4sHleKLzFQEnXo8h3t4gS0awNFzyar8nVKNb95OkiECI68PLy/FM3HfVAuqb12qPw3CXg==",
+      "frameworks": {
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Collections.Concurrent.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Collections.Concurrent.dll"
+          ]
+        },
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Collections.Concurrent.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Collections.Concurrent.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Collections.Concurrent.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Collections.Concurrent.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Collections.Concurrent.4.0.10-beta-22816.nupkg",
+        "System.Collections.Concurrent.4.0.10-beta-22816.nupkg.sha512",
+        "System.Collections.Concurrent.nuspec",
+        "lib/aspnetcore50/System.Collections.Concurrent.dll",
+        "lib/contract/System.Collections.Concurrent.dll",
+        "lib/net45/System.Collections.Concurrent.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Collections.Concurrent.dll"
       ]
     },
     "System.Globalization/4.0.10-beta-22816": {
