@@ -3,7 +3,8 @@
   "version": -9998,
   "projectFileDependencyGroups": {
     "": [
-      "Moon.Collections >= 1.0.7"
+      "Moon.Collections >= 1.0.7",
+      "Moon.IO.FileSystem >= 1.0.7"
     ],
     ".NETFramework,Version=v4.5.1": [],
     "DNX,Version=v4.5.1": [],
@@ -138,6 +139,133 @@
         "lib/net451/Moon.Contracts.xml"
       ]
     },
+    "Moon.IO/1.0.7": {
+      "serviceable": true,
+      "sha": "VLUwWDMVdm99B6mzIn23tHif86hLC3G5P1l8abSWFidFHYIFiLyl+yLJaVohAhyuuBbo9MFvl5J0k2oeZb+k+g==",
+      "frameworks": {
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Threading": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/net451/Moon.IO.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net451/Moon.IO.dll"
+          ]
+        },
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Threading": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Moon.IO.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Moon.IO.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Moon.Threading": "1.0.7"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Moon.IO.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Moon.IO.dll"
+          ]
+        }
+      },
+      "files": [
+        "Moon.IO.1.0.7.nupkg",
+        "Moon.IO.1.0.7.nupkg.sha512",
+        "Moon.IO.nuspec",
+        "lib/dnx451/Moon.IO.dll",
+        "lib/dnx451/Moon.IO.xml",
+        "lib/dnxcore50/Moon.IO.dll",
+        "lib/dnxcore50/Moon.IO.xml",
+        "lib/net451/Moon.IO.dll",
+        "lib/net451/Moon.IO.xml"
+      ]
+    },
+    "Moon.IO.FileSystem/1.0.7": {
+      "serviceable": true,
+      "sha": "2/In2xAiC/sVyXmTytWphSjFcWs6zCMk43/6DiEy+jB/y237R8qDQetKmwWVcaHAT5xQV+E4NwFCDbiehsjgRw==",
+      "frameworks": {
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.IO": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/net451/Moon.IO.FileSystem.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net451/Moon.IO.FileSystem.dll"
+          ]
+        },
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.IO": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Moon.IO.FileSystem.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Moon.IO.FileSystem.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Moon.IO": "1.0.7",
+            "System.IO.FileSystem": "4.0.0-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Moon.IO.FileSystem.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Moon.IO.FileSystem.dll"
+          ]
+        }
+      },
+      "files": [
+        "Moon.IO.FileSystem.1.0.7.nupkg",
+        "Moon.IO.FileSystem.1.0.7.nupkg.sha512",
+        "Moon.IO.FileSystem.nuspec",
+        "lib/dnx451/Moon.IO.FileSystem.dll",
+        "lib/dnx451/Moon.IO.FileSystem.xml",
+        "lib/dnxcore50/Moon.IO.FileSystem.dll",
+        "lib/dnxcore50/Moon.IO.FileSystem.xml",
+        "lib/net451/Moon.IO.FileSystem.dll",
+        "lib/net451/Moon.IO.FileSystem.xml"
+      ]
+    },
     "Moon.Runtime/1.0.7": {
       "serviceable": true,
       "sha": "6xD1O915TRs7YcQiz47xehVJhsNtCJgsxnp40610q6WgqfpYZaTF3WP/MapzFg3ydvrJasliaOFf4niaZBDR0g==",
@@ -200,6 +328,70 @@
         "lib/dnxcore50/Moon.Runtime.xml",
         "lib/net451/Moon.Runtime.dll",
         "lib/net451/Moon.Runtime.xml"
+      ]
+    },
+    "Moon.Threading/1.0.7": {
+      "serviceable": true,
+      "sha": "lyIei87F/Yik8ZhNhFVl2oMfp9T07q059MwAKqZNurN/vEFtvTOF9SMzvEyQ0dI/5u9l+krm7QYxv1reu0TKVQ==",
+      "frameworks": {
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/net451/Moon.Threading.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net451/Moon.Threading.dll"
+          ]
+        },
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Moon.Threading.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Moon.Threading.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Moon.Threading.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Moon.Threading.dll"
+          ]
+        }
+      },
+      "files": [
+        "Moon.Threading.1.0.7.nupkg",
+        "Moon.Threading.1.0.7.nupkg.sha512",
+        "Moon.Threading.nuspec",
+        "lib/dnx451/Moon.Threading.dll",
+        "lib/dnx451/Moon.Threading.xml",
+        "lib/dnxcore50/Moon.Threading.dll",
+        "lib/dnxcore50/Moon.Threading.xml",
+        "lib/net451/Moon.Threading.dll",
+        "lib/net451/Moon.Threading.xml"
       ]
     },
     "System.Collections/4.0.10-beta-22816": {
@@ -441,6 +633,133 @@
         "lib/contract/System.IO.dll",
         "lib/net45/System.IO.dll",
         "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.IO.dll"
+      ]
+    },
+    "System.IO.FileSystem/4.0.0-beta-22816": {
+      "serviceable": false,
+      "sha": "PcJ9xwnx7PmUaE5aqAGX0GKzkmmYpGfMzruT1Vfx9XIaFGsVm223ky0/FrKzUc5TYKN4MTfFp8GAooA+I0KMDA==",
+      "frameworks": {
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "System.IO": "4.0.10-beta-22816",
+            "System.IO.FileSystem.Primitives": "4.0.0-beta-22816",
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Runtime.Handles": "4.0.0-beta-22816",
+            "System.Text.Encoding": "4.0.10-beta-22816",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.IO.FileSystem.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.IO.FileSystem.dll"
+          ]
+        },
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.IO": "4.0.10-beta-22816",
+            "System.IO.FileSystem.Primitives": "4.0.0-beta-22816",
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Runtime.Handles": "4.0.0-beta-22816",
+            "System.Text.Encoding": "4.0.10-beta-22816",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.IO.FileSystem.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.IO.FileSystem.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.IO": "4.0.10-beta-22816",
+            "System.IO.FileSystem.Primitives": "4.0.0-beta-22816",
+            "System.Runtime": "4.0.20-beta-22816",
+            "System.Runtime.Handles": "4.0.0-beta-22816",
+            "System.Text.Encoding": "4.0.10-beta-22816",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.IO.FileSystem.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.IO.FileSystem.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.IO.FileSystem.4.0.0-beta-22816.nupkg",
+        "System.IO.FileSystem.4.0.0-beta-22816.nupkg.sha512",
+        "System.IO.FileSystem.nuspec",
+        "lib/aspnetcore50/System.IO.FileSystem.dll",
+        "lib/contract/System.IO.FileSystem.dll",
+        "lib/net45/System.IO.FileSystem.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.IO.FileSystem.dll"
+      ]
+    },
+    "System.IO.FileSystem.Primitives/4.0.0-beta-22816": {
+      "serviceable": false,
+      "sha": "UKD9kvQOZ6QHhJnroaRnJVVzu36nDZc+LJNkhEAmXAJT4SL2G8PyWlUkDptcFSEmv5b71/IFdllS8RIfKP9X2g==",
+      "frameworks": {
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.IO.FileSystem.Primitives.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.IO.FileSystem.Primitives.dll"
+          ]
+        },
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.IO.FileSystem.Primitives.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.IO.FileSystem.Primitives.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.IO.FileSystem.Primitives.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.IO.FileSystem.Primitives.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.IO.FileSystem.Primitives.4.0.0-beta-22816.nupkg",
+        "System.IO.FileSystem.Primitives.4.0.0-beta-22816.nupkg.sha512",
+        "System.IO.FileSystem.Primitives.nuspec",
+        "lib/aspnetcore50/System.IO.FileSystem.Primitives.dll",
+        "lib/contract/System.IO.FileSystem.Primitives.dll",
+        "lib/net45/System.IO.FileSystem.Primitives.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.IO.FileSystem.Primitives.dll"
       ]
     },
     "System.Linq/4.0.0-beta-22816": {
@@ -734,6 +1053,64 @@
         "lib/contract/System.Runtime.Extensions.dll",
         "lib/net45/System.Runtime.Extensions.dll",
         "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Runtime.Extensions.dll"
+      ]
+    },
+    "System.Runtime.Handles/4.0.0-beta-22816": {
+      "serviceable": false,
+      "sha": "t0hDCtbwOKLBTcyiXHYRfaVb8pXCFYjGDWjmgyaaqmiXYtfzDlUHQ7NGaKHLOzcp29UunHZyS1CVplJ5ZiQ8Qg==",
+      "frameworks": {
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System.Core"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Runtime.Handles.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Runtime.Handles.dll"
+          ]
+        },
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System.Core"
+          ],
+          "runtimeAssemblies": [
+            "lib/net45/System.Runtime.Handles.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net45/System.Runtime.Handles.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "System.Runtime": "4.0.20-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/aspnetcore50/System.Runtime.Handles.dll"
+          ],
+          "compileAssemblies": [
+            "lib/contract/System.Runtime.Handles.dll"
+          ]
+        }
+      },
+      "files": [
+        "License.rtf",
+        "System.Runtime.Handles.4.0.0-beta-22816.nupkg",
+        "System.Runtime.Handles.4.0.0-beta-22816.nupkg.sha512",
+        "System.Runtime.Handles.nuspec",
+        "lib/aspnetcore50/System.Runtime.Handles.dll",
+        "lib/contract/System.Runtime.Handles.dll",
+        "lib/net45/System.Runtime.Handles.dll",
+        "lib/portable-wpa81+wp80+win80+net45+aspnetcore50/System.Runtime.Handles.dll"
       ]
     },
     "System.Text.Encoding/4.0.10-beta-22816": {

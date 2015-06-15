@@ -7,7 +7,8 @@
     "description": "Simple localization for .NET / DNX applications.",
     "tags": [ "moontea", "localization" ],
     "dependencies": {
-        "Moon.Collections": "1.0.7"
+        "Moon.Collections": "1.0.7",
+        "Moon.IO.FileSystem": "1.0.7"
     },
     "frameworks": {
         "net451": { },

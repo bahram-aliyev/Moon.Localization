@@ -990,6 +990,133 @@
         "lib/net451/Moon.Contracts.xml"
       ]
     },
+    "Moon.IO/1.0.7": {
+      "serviceable": true,
+      "sha": "VLUwWDMVdm99B6mzIn23tHif86hLC3G5P1l8abSWFidFHYIFiLyl+yLJaVohAhyuuBbo9MFvl5J0k2oeZb+k+g==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Threading": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Moon.IO.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Moon.IO.dll"
+          ]
+        },
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Threading": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/net451/Moon.IO.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net451/Moon.IO.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Moon.Threading": "1.0.7"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Moon.IO.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Moon.IO.dll"
+          ]
+        }
+      },
+      "files": [
+        "Moon.IO.1.0.7.nupkg",
+        "Moon.IO.1.0.7.nupkg.sha512",
+        "Moon.IO.nuspec",
+        "lib/dnx451/Moon.IO.dll",
+        "lib/dnx451/Moon.IO.xml",
+        "lib/dnxcore50/Moon.IO.dll",
+        "lib/dnxcore50/Moon.IO.xml",
+        "lib/net451/Moon.IO.dll",
+        "lib/net451/Moon.IO.xml"
+      ]
+    },
+    "Moon.IO.FileSystem/1.0.7": {
+      "serviceable": true,
+      "sha": "2/In2xAiC/sVyXmTytWphSjFcWs6zCMk43/6DiEy+jB/y237R8qDQetKmwWVcaHAT5xQV+E4NwFCDbiehsjgRw==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.IO": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Moon.IO.FileSystem.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Moon.IO.FileSystem.dll"
+          ]
+        },
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.IO": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/net451/Moon.IO.FileSystem.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net451/Moon.IO.FileSystem.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Moon.IO": "1.0.7",
+            "System.IO.FileSystem": "4.0.0-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Moon.IO.FileSystem.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Moon.IO.FileSystem.dll"
+          ]
+        }
+      },
+      "files": [
+        "Moon.IO.FileSystem.1.0.7.nupkg",
+        "Moon.IO.FileSystem.1.0.7.nupkg.sha512",
+        "Moon.IO.FileSystem.nuspec",
+        "lib/dnx451/Moon.IO.FileSystem.dll",
+        "lib/dnx451/Moon.IO.FileSystem.xml",
+        "lib/dnxcore50/Moon.IO.FileSystem.dll",
+        "lib/dnxcore50/Moon.IO.FileSystem.xml",
+        "lib/net451/Moon.IO.FileSystem.dll",
+        "lib/net451/Moon.IO.FileSystem.xml"
+      ]
+    },
     "Moon.Runtime/1.0.7": {
       "serviceable": true,
       "sha": "6xD1O915TRs7YcQiz47xehVJhsNtCJgsxnp40610q6WgqfpYZaTF3WP/MapzFg3ydvrJasliaOFf4niaZBDR0g==",
@@ -1052,6 +1179,70 @@
         "lib/dnxcore50/Moon.Runtime.xml",
         "lib/net451/Moon.Runtime.dll",
         "lib/net451/Moon.Runtime.xml"
+      ]
+    },
+    "Moon.Threading/1.0.7": {
+      "serviceable": true,
+      "sha": "lyIei87F/Yik8ZhNhFVl2oMfp9T07q059MwAKqZNurN/vEFtvTOF9SMzvEyQ0dI/5u9l+krm7QYxv1reu0TKVQ==",
+      "frameworks": {
+        "DNX,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/dnx451/Moon.Threading.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnx451/Moon.Threading.dll"
+          ]
+        },
+        ".NETFramework,Version=v4.5.1": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7"
+          },
+          "frameworkAssemblies": [
+            "mscorlib",
+            "System",
+            "System.Core",
+            "Microsoft.CSharp"
+          ],
+          "runtimeAssemblies": [
+            "lib/net451/Moon.Threading.dll"
+          ],
+          "compileAssemblies": [
+            "lib/net451/Moon.Threading.dll"
+          ]
+        },
+        "DNXCore,Version=v5.0": {
+          "dependencies": {
+            "Moon.Runtime": "1.0.7",
+            "System.Threading.Tasks": "4.0.10-beta-22816"
+          },
+          "frameworkAssemblies": [],
+          "runtimeAssemblies": [
+            "lib/dnxcore50/Moon.Threading.dll"
+          ],
+          "compileAssemblies": [
+            "lib/dnxcore50/Moon.Threading.dll"
+          ]
+        }
+      },
+      "files": [
+        "Moon.Threading.1.0.7.nupkg",
+        "Moon.Threading.1.0.7.nupkg.sha512",
+        "Moon.Threading.nuspec",
+        "lib/dnx451/Moon.Threading.dll",
+        "lib/dnx451/Moon.Threading.xml",
+        "lib/dnxcore50/Moon.Threading.dll",
+        "lib/dnxcore50/Moon.Threading.xml",
+        "lib/net451/Moon.Threading.dll",
+        "lib/net451/Moon.Threading.xml"
       ]
     },
     "Newtonsoft.Json/6.0.6": {
