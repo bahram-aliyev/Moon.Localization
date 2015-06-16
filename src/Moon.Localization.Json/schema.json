@@ -1,0 +1,20 @@
+﻿{
+    "title": "JSON schema for Moon.Localization dictionaries",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "type": "object",
+
+    "properties": {
+        "culture": {
+            "type": "string"
+        }
+    },
+
+    "additionalProperties": {
+        "type": [ "object", "string" ]
+    },
+
+    "required": [
+        "culture"
+    ]
+}

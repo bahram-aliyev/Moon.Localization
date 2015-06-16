@@ -23,6 +23,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{812E7553-DA2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0CDB77BB-4DDC-4D58-927E-9965A9FAF5E4}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Moon.Localization.Json", "src\Moon.Localization.Json\Moon.Localization.Json.xproj", "{B3BE0EFF-9D93-4345-B203-D5FBF6C6A328}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Moon.Localization.Json.Tests", "test\Moon.Localization.Json.Tests\Moon.Localization.Json.Tests.xproj", "{AB90F512-A5A4-4492-ADDA-A3D6AB381E29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{A0D961C2-2818-4C12-A8DF-FEE5222CD2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0D961C2-2818-4C12-A8DF-FEE5222CD2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0D961C2-2818-4C12-A8DF-FEE5222CD2C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3BE0EFF-9D93-4345-B203-D5FBF6C6A328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3BE0EFF-9D93-4345-B203-D5FBF6C6A328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3BE0EFF-9D93-4345-B203-D5FBF6C6A328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3BE0EFF-9D93-4345-B203-D5FBF6C6A328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB90F512-A5A4-4492-ADDA-A3D6AB381E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB90F512-A5A4-4492-ADDA-A3D6AB381E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB90F512-A5A4-4492-ADDA-A3D6AB381E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB90F512-A5A4-4492-ADDA-A3D6AB381E29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +56,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2A565A3B-3A8F-4910-8894-ED6FEDD9B755} = {812E7553-DA26-4ACC-B876-2423BDFDD88B}
 		{A0D961C2-2818-4C12-A8DF-FEE5222CD2C4} = {0CDB77BB-4DDC-4D58-927E-9965A9FAF5E4}
+		{B3BE0EFF-9D93-4345-B203-D5FBF6C6A328} = {812E7553-DA26-4ACC-B876-2423BDFDD88B}
+		{AB90F512-A5A4-4492-ADDA-A3D6AB381E29} = {0CDB77BB-4DDC-4D58-927E-9965A9FAF5E4}
 	EndGlobalSection
 EndGlobal

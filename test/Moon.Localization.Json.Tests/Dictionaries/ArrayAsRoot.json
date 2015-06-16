@@ -1,0 +1,12 @@
+﻿[
+    {
+        "culture": "en",
+
+        "Title": "Application Title",
+
+        "Search": {
+            "Label": "Search",
+            "NotSupported": "Not supported"
+        }
+    }
+]

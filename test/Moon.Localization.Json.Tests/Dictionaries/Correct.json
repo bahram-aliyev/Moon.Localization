@@ -1,0 +1,10 @@
+﻿{
+    "culture": "en",
+
+    "Title": "Application Title", // comment to ignore
+
+    "Search": {
+        "Label": "Search",
+        "NotSupported": "Not supported"
+    }
+}
