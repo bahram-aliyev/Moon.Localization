@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dictionary culture="en" xmlns="http://xml.moontea.net/localization">
+  <localized name="Title">
+    <value>Application Title</value>
+    <!-- comment to ignore -->
+  </localized>
+
+  <category name="Search">
+    <localized name="Label">
+      <value>Search</value>
+    </localized>
+    <localized name="NotSupported">
+      <value>Not supported</value>
+    </localized>
+  </category>
+</dictionary>

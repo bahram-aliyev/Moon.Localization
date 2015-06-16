@@ -1,0 +1,32 @@
+﻿{
+    "version": "1.0.0-ci",
+    "authors": [ "Dusan Janosik" ],
+    "owners": [ "djanosik" ],
+    "projectUrl": "https://github.com/djanosik/Moon.Localization",
+    "iconUrl": "http://moontea.net/moon.png",
+    "description": "XML-based dictionaries for Moon.Localization package.",
+    "tags": [ "moontea", "localization", "xml" ],
+    "dependencies": {
+        "Moon.Localization": "1.0.0-ci"
+    },
+
+    "frameworks": {
+        "net451": {
+            "frameworkAssemblies": {
+                "System.Xml.Linq": "4.0.0.0",
+                "System.Xml": "4.0.0.0"
+            }
+        },
+        "dnx451": {
+            "frameworkAssemblies": {
+                "System.Xml.Linq": "4.0.0.0",
+                "System.Xml": "4.0.0.0"
+            }
+        },
+        "dnxcore50": {
+            "dependencies": {
+                "System.Xml.XDocument": "4.0.10-beta-22816"
+            }
+        }
+    }
+}

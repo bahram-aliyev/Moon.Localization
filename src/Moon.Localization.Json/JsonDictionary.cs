@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 namespace Moon.Localization.Json
 {
     /// <summary>
-    /// The language definition loaded from XML files.
+    /// The language definition loaded from JSON files.
     /// </summary>
     public class JsonDictionary : IResourceDictionary
     {
@@ -26,7 +26,7 @@ namespace Moon.Localization.Json
         /// <summary>
         /// Loads resource dictionary from the given stream.
         /// </summary>
-        /// <param name="data">The stream containing XML resource dictionary.</param>
+        /// <param name="data">The stream containing JSON resource dictionary.</param>
         public static JsonDictionary Load(Stream data)
         {
             Requires.NotNull(data, nameof(data));

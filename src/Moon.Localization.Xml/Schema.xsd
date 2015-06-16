@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://xml.moontea.net/localization"
+    xmlns="http://xml.moontea.net/localization" attributeFormDefault="unqualified"
+    elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="dictionary">
+    <xs:complexType mixed="false">
+      <xs:sequence maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="localized" maxOccurs="1" minOccurs="0" type="localized"> </xs:element>
+        <xs:element name="category" maxOccurs="1" minOccurs="0" type="category">
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="culture" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="localized">
+    <xs:sequence>
+      <xs:element type="xs:string" name="value"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name" use="required"/>
+    <xs:attribute name="hint" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="category">
+    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="localized" maxOccurs="1" minOccurs="0" type="localized"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="category" type="category"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name" use="required"/>
+  </xs:complexType>
+</xs:schema>
