@@ -10,6 +10,7 @@
         "Moon.Collections": "1.0.7",
         "Moon.IO.FileSystem": "1.0.7"
     },
+
     "frameworks": {
         "net451": { },
         "dnx451": { },
