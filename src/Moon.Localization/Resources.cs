@@ -70,14 +70,14 @@ namespace Moon.Localization
         /// Returns resource with the given name in the given category; or <c>null</c> if the
         /// resource does not exist.
         /// </summary>
-        /// <param name="categoryName">The name of the category.</param>
+        /// <param name="category">The name of the category.</param>
         /// <param name="name">The name of the resource.</param>
-        public static string Get(string categoryName, string name)
+        public static string Get(string category, string name)
         {
-            Requires.NotNullOrWhiteSpace(categoryName, nameof(categoryName));
+            Requires.NotNullOrWhiteSpace(category, nameof(category));
             Requires.NotNullOrWhiteSpace(name, nameof(name));
 
-            return Get($"{categoryName}:{name}") ?? Get(name);
+            return Get($"{category}:{name}") ?? Get(name);
         }
 
         /// <summary>
