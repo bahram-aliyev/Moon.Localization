@@ -1,40 +1,36 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Owin;
+using System.Web;
 using Moon.Localization;
 using Newtonsoft.Json;
 
-namespace Moon.Owin.Localization
+namespace Moon.Web.Localization
 {
     /// <summary>
     /// Writes localized values to HTTP response.
     /// </summary>
-    public class ScriptMiddleware : OwinMiddleware
+    public class ScriptHandler : IHttpHandler
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ScriptMiddleware" /> class
+        /// Gets whether the handler can be reused by other requests.
         /// </summary>
-        /// <param name="next">The next middleware.</param>
-        public ScriptMiddleware(OwinMiddleware next)
-            : base(next)
-        {
-        }
+        public bool IsReusable
+            => true;
 
         /// <summary>
         /// Writes localized values to HTTP response.
         /// </summary>
-        /// <param name="context">The OWIN context.</param>
-        public override Task Invoke(IOwinContext context)
+        /// <param name="context">The HTTP context.</param>
+        public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/javascript";
             context.Response.StatusCode = 200;
 
-            return WriteScript(context.Response);
+            WriteScript(context.Response);
         }
 
-        Task WriteScript(IOwinResponse response)
+        void WriteScript(HttpResponse response)
         {
             var script = new StringBuilder();
             var values = Resources.GetDictionary().Values;
@@ -46,7 +42,7 @@ namespace Moon.Owin.Localization
             script.Append("return values[key]||values[name];");
             script.Append("}};");
 
-            return response.WriteAsync(script.ToString());
+            response.Write(script.ToString());
         }
 
         string Serialize(IDictionary<string, string> values)

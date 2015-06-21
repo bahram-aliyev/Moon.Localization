@@ -26,6 +26,8 @@ namespace Moon.AspNet.Localization
         public Task Invoke(HttpContext context)
         {
             context.Response.ContentType = "text/javascript";
+            context.Response.StatusCode = 200;
+
             return WriteScript(context.Response);
         }
 
