@@ -6,6 +6,7 @@
     "iconUrl": "http://moontea.net/moon.png",
     "description": "JSON-based dictionaries for Moon.Localization package.",
     "tags": [ "moontea", "localization", "json" ],
+
     "dependencies": {
         "Newtonsoft.Json": "6.0.8",
         "Moon.Localization": "1.0.0-ci"

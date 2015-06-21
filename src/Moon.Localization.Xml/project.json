@@ -6,6 +6,7 @@
     "iconUrl": "http://moontea.net/moon.png",
     "description": "XML-based dictionaries for Moon.Localization package.",
     "tags": [ "moontea", "localization", "xml" ],
+
     "dependencies": {
         "Moon.Localization": "1.0.0-ci"
     },
