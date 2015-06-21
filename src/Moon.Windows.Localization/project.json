@@ -6,6 +6,7 @@
     "iconUrl": "http://moontea.net/moon.png",
     "description": "Simple localization for .NET WPF applications.",
     "tags": [ "moontea", "localization", "wpf", "xaml" ],
+
     "dependencies": {
         "Moon.Localization": "1.0.0-ci"
     },
