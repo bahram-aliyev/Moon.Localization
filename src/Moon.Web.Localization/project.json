@@ -4,16 +4,13 @@
     "owners": [ "djanosik" ],
     "projectUrl": "https://github.com/djanosik/Moon.Localization",
     "iconUrl": "http://moontea.net/moon.png",
-    "description": "Simple localization for ASP.NET 5 (MVC 6) applications.",
+    "description": "Simple localization for ASP.NET / IIS applications.",
     "tags": [ "moontea", "localization", "aspnet", "web" ],
 
     "dependencies": {
-        "Moon.AspNet": "1.0.3",
-        "Moon.Localization": "1.0.0-ci"
     },
 
     "frameworks": {
-        "dnx451": { },
-        "dnxcore50": { }
+        "net451": { }
     }
 }

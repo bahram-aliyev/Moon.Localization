@@ -1,0 +1,19 @@
+﻿{
+    "version": "1.0.0-ci",
+    "authors": [ "Dusan Janosik" ],
+    "owners": [ "djanosik" ],
+    "projectUrl": "https://github.com/djanosik/Moon.Localization",
+    "iconUrl": "http://moontea.net/moon.png",
+    "description": "Simple localization for ASP.NET OWIN applications.",
+    "tags": [ "moontea", "localization", "aspnet", "web", "owin" ],
+
+    "dependencies": {
+        "Newtonsoft.Json": "6.0.8",
+        "Moon.Localization": "1.0.0-ci",
+        "Microsoft.Owin": "3.0.1"
+    },
+
+    "frameworks": {
+        "net451": { }
+    }
+}

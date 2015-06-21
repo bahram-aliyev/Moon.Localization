@@ -9,7 +9,7 @@ namespace Microsoft.AspNet.Builder
     /// <summary>
     /// <see cref="IApplicationBuilder" /> extension methods.
     /// </summary>
-    public static class AppBuilderExtensions
+    public static class ApplicationBuilderExtensions
     {
         /// <summary>
         /// Sets culture used by the application according to Accept-Language header.
