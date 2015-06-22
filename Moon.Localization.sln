@@ -37,6 +37,10 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Moon.Owin.Localization", "s
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Moon.Web.Localization", "src\Moon.Web.Localization\Moon.Web.Localization.xproj", "{E8A897B9-6D47-4320-9AF0-DE8C11899E4A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{FC1B3632-52AB-4F0E-9995-B49F0784D5B8}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Moon.AspNet.Localization.Sample", "samples\Moon.AspNet.Localization.Sample\Moon.AspNet.Localization.Sample.xproj", "{82F023A6-7356-41CC-BE4B-9510158C311F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +83,10 @@ Global
 		{E8A897B9-6D47-4320-9AF0-DE8C11899E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8A897B9-6D47-4320-9AF0-DE8C11899E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8A897B9-6D47-4320-9AF0-DE8C11899E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82F023A6-7356-41CC-BE4B-9510158C311F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82F023A6-7356-41CC-BE4B-9510158C311F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82F023A6-7356-41CC-BE4B-9510158C311F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82F023A6-7356-41CC-BE4B-9510158C311F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,5 +101,6 @@ Global
 		{D2B30C12-1B6B-443E-B521-D928658D98A7} = {812E7553-DA26-4ACC-B876-2423BDFDD88B}
 		{649887B2-75FE-42A5-BDDD-B1C7B538348F} = {812E7553-DA26-4ACC-B876-2423BDFDD88B}
 		{E8A897B9-6D47-4320-9AF0-DE8C11899E4A} = {812E7553-DA26-4ACC-B876-2423BDFDD88B}
+		{82F023A6-7356-41CC-BE4B-9510158C311F} = {FC1B3632-52AB-4F0E-9995-B49F0784D5B8}
 	EndGlobalSection
 EndGlobal

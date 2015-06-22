@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dictionary culture="cs" xmlns="http://xml.moontea.net/localization">
+  <localized name="Click">
+    <value>Klikni!</value>
+  </localized>
+
+  <category name="Alerts">
+    <localized name="Text">
+      <value>Lokalizovaná zpráva :)</value>
+    </localized>
+  </category>
+</dictionary>

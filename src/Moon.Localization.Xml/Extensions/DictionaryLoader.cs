@@ -13,7 +13,7 @@ namespace Moon.Localization
         /// <param name="folderPath">The path where to look for dictionaries.</param>
         /// <param name="searchPattern">The string to match against the names of files in path.</param>
         /// <param name="loader">A function used to load dictionaries.</param>
-        public static void LoadXml(this DictionaryLoader loader, string folderPath)
+        public static DictionaryLoader LoadXml(this DictionaryLoader loader, string folderPath)
             => loader.Load(folderPath, "*.xml", XmlDictionary.Load);
     }
 }

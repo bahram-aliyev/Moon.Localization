@@ -27,7 +27,7 @@ namespace Moon.Localization
         /// <param name="folderPath">The path where to look for dictionaries.</param>
         /// <param name="searchPattern">The string to match against the names of files in path.</param>
         /// <param name="loader">A function used to load dictionaries.</param>
-        public void Load(string folderPath, string searchPattern, Func<Stream, IResourceDictionary> loader)
+        public DictionaryLoader Load(string folderPath, string searchPattern, Func<Stream, IResourceDictionary> loader)
         {
             folderPath = ResolvePath(folderPath);
 
@@ -38,6 +38,8 @@ namespace Moon.Localization
                     Resources.Load(loader(stream));
                 }
             }
+
+            return this;
         }
 
         string ResolvePath(string path)
