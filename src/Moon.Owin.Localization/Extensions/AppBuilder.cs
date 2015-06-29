@@ -17,7 +17,7 @@ namespace Owin
         /// <param name="app">The application builder.</param>
         /// <param name="loader">The dictionary loader.</param>
         public static IAppBuilder UseLocalization(this IAppBuilder app, Action<DictionaryLoader> loader)
-            => app.UseLocalization(new PathString("/js/resources.js"), loader);
+            => app.UseLocalization(new PathString("/assets/resources.js"), loader);
 
         /// <summary>
         /// Sets culture used by the application according to Accept-Language header.
