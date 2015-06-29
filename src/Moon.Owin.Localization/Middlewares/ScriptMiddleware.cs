@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Owin;
@@ -37,10 +38,12 @@ namespace Moon.Owin.Localization
         Task WriteScript(IOwinResponse response)
         {
             var script = new StringBuilder();
+            var cultures = Resources.Cultures.Select(c => c.Name);
             var values = Resources.GetDictionary().Values;
 
-            script.Append("window.Resources={get:function(category,name){");
-            script.Append("category=(category||'').replace(new RegExp('/','g'),':');name=(name||'').replace(new RegExp('/','g'),':');");
+            script.Append("window.Resources={");
+            script.Append($"cultures:{Serialize(cultures)},currentCulture:{Serialize(GetCurrentCultures())},");
+            script.Append("get:function(category,name){category=(category||'').replace(new RegExp('/','g'),':');name=(name||'').replace(new RegExp('/','g'),':');");
             script.Append($"var values={Serialize(values)};");
             script.Append("var key=name.length>0?(category+':'+name):category;");
             script.Append("return values[key]||values[name];");
@@ -49,7 +52,19 @@ namespace Moon.Owin.Localization
             return response.WriteAsync(script.ToString());
         }
 
-        string Serialize(IDictionary<string, string> values)
+        IEnumerable<string> GetCurrentCultures()
+        {
+            var culture = Resources.CurrentCulture;
+
+            yield return culture.Name;
+
+            if (culture.Parent != null && culture.Parent.Name.Length > 0)
+            {
+                yield return culture.Parent.Name;
+            }
+        }
+
+        string Serialize(object obj)
         {
             using (var writer = new StringWriter())
             using (var jsonWriter = new JsonTextWriter(writer))
@@ -57,7 +72,7 @@ namespace Moon.Owin.Localization
                 jsonWriter.QuoteName = true;
 
                 var serializer = new JsonSerializer();
-                serializer.Serialize(jsonWriter, values);
+                serializer.Serialize(jsonWriter, obj);
 
                 return writer.ToString();
             }
