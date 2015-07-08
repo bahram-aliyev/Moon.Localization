@@ -69,7 +69,7 @@ namespace Moon.Owin.Localization
                 return new CultureInfo(cultureName);
             }
 
-            return Resources.DefaultCulture;
+            return null;
         }
 
         void UpdateCurrentCulture(CultureInfo culture)
