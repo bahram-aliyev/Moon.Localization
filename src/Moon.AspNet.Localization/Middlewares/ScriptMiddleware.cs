@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,13 +37,11 @@ namespace Moon.AspNet.Localization
         Task WriteScript(HttpResponse response)
         {
             var script = new StringBuilder();
-            var cultures = Resources.Cultures.Select(c => c.Name);
-            var values = Resources.GetDictionary().Values;
 
             script.Append("window.Resources={");
-            script.Append($"cultures:{Json.Serialize(cultures)},currentCulture:{Json.Serialize(GetCurrentCultures())},");
+            script.Append($"cultures:{Json.Serialize(GetCultures(), true)},currentCulture:{Json.Serialize(GetCurrentCulture(), true)},");
             script.Append("get:function(category,name){category=(category||'').replace(new RegExp('/','g'),':');name=(name||'').replace(new RegExp('/','g'),':');");
-            script.Append($"var values={Json.Serialize(values, true)};");
+            script.Append($"var values={Json.Serialize(Resources.GetDictionary().Values, true)};");
             script.Append("var key=name.length>0?(category+':'+name):category;");
             script.Append("return values[key]||values[name];");
             script.Append("}};");
@@ -50,7 +49,17 @@ namespace Moon.AspNet.Localization
             return response.WriteAsync(script.ToString());
         }
 
-        IEnumerable<string> GetCurrentCultures()
+        IEnumerable GetCultures()
+        {
+            return Resources.Cultures.Select(c => new
+            {
+                name = c.Name,
+                isoName = c.TwoLetterISOLanguageName,
+                nativeName = c.NativeName
+            });
+        }
+
+        IEnumerable<string> GetCurrentCulture()
         {
             var culture = Resources.CurrentCulture;
 
