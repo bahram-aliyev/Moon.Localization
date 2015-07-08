@@ -39,7 +39,7 @@ namespace Moon.AspNet.Localization
             var script = new StringBuilder();
 
             script.Append("window.Resources={");
-            script.Append($"cultures:{Json.Serialize(GetCultures(), true)},currentCulture:{Json.Serialize(GetCurrentCulture(), true)},");
+            script.Append($"cultures:{Json.Serialize(GetCultures(), true)},currentCulture:{Json.Serialize(Resources.CurrentCulture.Name)},");
             script.Append("get:function(category,name){category=(category||'').replace(new RegExp('/','g'),':');name=(name||'').replace(new RegExp('/','g'),':');");
             script.Append($"var values={Json.Serialize(Resources.GetDictionary().Values, true)};");
             script.Append("var key=name.length>0?(category+':'+name):category;");
@@ -57,18 +57,6 @@ namespace Moon.AspNet.Localization
                 isoName = c.TwoLetterISOLanguageName,
                 nativeName = c.NativeName
             });
-        }
-
-        IEnumerable<string> GetCurrentCulture()
-        {
-            var culture = Resources.CurrentCulture;
-
-            yield return culture.Name;
-
-            if (culture.Parent != null && culture.Parent.Name.Length > 0)
-            {
-                yield return culture.Parent.Name;
-            }
         }
     }
 }

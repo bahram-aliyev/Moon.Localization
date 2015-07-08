@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -37,7 +36,7 @@ namespace Moon.Web.Localization
             var script = new StringBuilder();
 
             script.Append("window.Resources={");
-            script.Append($"cultures:{Serialize(GetCultures())},currentCulture:{Serialize(GetCurrentCulture())},");
+            script.Append($"cultures:{Serialize(GetCultures())},currentCulture:{Serialize(Resources.CurrentCulture.Name)},");
             script.Append("get:function(category,name){category=(category||'').replace(new RegExp('/','g'),':');name=(name||'').replace(new RegExp('/','g'),':');");
             script.Append($"var values={Serialize(Resources.GetDictionary().Values)};");
             script.Append("var key=name.length>0?(category+':'+name):category;");
@@ -55,18 +54,6 @@ namespace Moon.Web.Localization
                 isoName = c.TwoLetterISOLanguageName,
                 nativeName = c.NativeName
             });
-        }
-
-        IEnumerable<string> GetCurrentCulture()
-        {
-            var culture = Resources.CurrentCulture;
-
-            yield return culture.Name;
-
-            if (culture.Parent != null && culture.Parent.Name.Length > 0)
-            {
-                yield return culture.Parent.Name;
-            }
         }
 
         string Serialize(object obj)
