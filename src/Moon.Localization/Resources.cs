@@ -23,7 +23,8 @@ namespace Moon.Localization
 
         /// <summary>
         /// Gets or sets the default culture used when a dictionary for the
-        /// <see cref="CurrentCulture" /> does not exist.
+        /// <see cref="CultureInfo.CurrentUICulture" /> or its <see cref="CultureInfo.Parent" />
+        /// does not exist.
         /// </summary>
         public static CultureInfo DefaultCulture
         {
@@ -36,17 +37,35 @@ namespace Moon.Localization
         }
 
         /// <summary>
+        /// Gets the culture of the dictionary we will load resources from. It's equal to either
+        /// <see cref="CultureInfo.CurrentUICulture" />, its <see cref="CultureInfo.Parent" /> or
+        /// the <see cref="DefaultCulture" />.
+        /// </summary>
+        public static CultureInfo CurrentCulture
+        {
+            get
+            {
+                var culture = CultureInfo.CurrentUICulture;
+
+                if (!dictionaries.ContainsKey(culture))
+                {
+                    culture = culture.Parent;
+                }
+
+                if (!dictionaries.ContainsKey(culture))
+                {
+                    culture = defaultCulture;
+                }
+
+                return culture;
+            }
+        }
+
+        /// <summary>
         /// Gets an enumeration of all cultures dictionaries are available for.
         /// </summary>
         public static IEnumerable<CultureInfo> Cultures
             => dictionaries.Keys;
-
-        /// <summary>
-        /// Gets the culture used when deciding from what dictionary to load resources. It's equal
-        /// to <see cref="CultureInfo.CurrentUICulture" />.
-        /// </summary>
-        public static CultureInfo CurrentCulture
-            => CultureInfo.CurrentUICulture;
 
         /// <summary>
         /// Returns a resource with the given name; or <c>null</c> if the resource does not exist.
@@ -86,24 +105,12 @@ namespace Moon.Localization
         /// </summary>
         public static IResourceDictionary GetDictionary()
         {
-            var culture = CurrentCulture;
-
-            if (!dictionaries.ContainsKey(culture))
-            {
-                culture = culture.Parent;
-            }
-
-            if (!dictionaries.ContainsKey(culture))
-            {
-                culture = defaultCulture;
-            }
-
-            if (!dictionaries.ContainsKey(culture))
+            if (!dictionaries.ContainsKey(CurrentCulture))
             {
                 throw new DictionaryNotFoundException();
             }
 
-            return dictionaries[culture];
+            return dictionaries[CurrentCulture];
         }
 
         /// <summary>
