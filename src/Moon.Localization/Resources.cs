@@ -22,8 +22,8 @@ namespace Moon.Localization
         }
 
         /// <summary>
-        /// Gets or sets the default culture used when an <see cref="IResourceDictionary" /> for the
-        /// current UI culture does not exist.
+        /// Gets or sets the default culture used when a dictionary for the
+        /// <see cref="CurrentCulture" /> does not exist.
         /// </summary>
         public static CultureInfo DefaultCulture
         {
@@ -36,19 +36,20 @@ namespace Moon.Localization
         }
 
         /// <summary>
-        /// Gets an enumeration of cultures of all loaded dictionaries.
+        /// Gets an enumeration of all cultures dictionaries are available for.
         /// </summary>
         public static IEnumerable<CultureInfo> Cultures
             => dictionaries.Keys;
 
         /// <summary>
-        /// Gets the current UI culture.
+        /// Gets the culture used when deciding from what dictionary to load resources. It's equal
+        /// to <see cref="CultureInfo.CurrentUICulture" />.
         /// </summary>
         public static CultureInfo CurrentCulture
             => CultureInfo.CurrentUICulture;
 
         /// <summary>
-        /// Returns resource with the given name; or <c>null</c> if the resource does not exist.
+        /// Returns a resource with the given name; or <c>null</c> if the resource does not exist.
         /// </summary>
         /// <param name="name">The name of the resource.</param>
         public static string Get(string name)

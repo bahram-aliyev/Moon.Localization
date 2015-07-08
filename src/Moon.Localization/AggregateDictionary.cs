@@ -7,7 +7,6 @@ namespace Moon.Localization
 {
     /// <summary>
     /// The resource dictionary used to aggregate several dictionaries for the same culture.
-    /// Categories and values are merged. Values with existing names are replaced.
     /// </summary>
     public class AggregateDictionary : IResourceDictionary
     {
@@ -38,8 +37,8 @@ namespace Moon.Localization
             => values;
 
         /// <summary>
-        /// Adds another resource dictionary. Categories and values are merged. Values with existing
-        /// name are replaced.
+        /// Adds another resource dictionary. Values from the dictionary will be merged with current
+        /// values. Existing values will be replaced.
         /// </summary>
         /// <param name="dictionary">The resource dictionary.</param>
         /// <exception cref="CultureDoesNotMatchException">
