@@ -13,6 +13,13 @@ namespace Moon.Localization
         /// <summary>
         /// Initializes a new instance of the <see cref="DictionaryLoader" /> class.
         /// </summary>
+        public DictionaryLoader()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DictionaryLoader" /> class.
+        /// </summary>
         /// <param name="rootPath">The root / application path.</param>
         public DictionaryLoader(string rootPath)
         {
