@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using Moon.Localitzation;
 using Xunit;
 
 namespace Moon.Localization.Tests

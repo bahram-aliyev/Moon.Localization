@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace Moon.Localitzation
+namespace Moon.Localization
 {
     /// <summary>
     /// Provides helpers for dealing with currencies.
