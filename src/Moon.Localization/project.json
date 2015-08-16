@@ -1,25 +1,20 @@
 {
-    "version": "1.0.0-ci",
-    "authors": [ "Dusan Janosik" ],
-    "owners": [ "djanosik" ],
-    "projectUrl": "https://github.com/djanosik/Moon.Localization",
-    "iconUrl": "http://moontea.net/moon.png",
-    "description": "Simple localization for .NET / DNX applications.",
-    "tags": [ "moontea", "localization" ],
+  "version": "1.0.0-ci",
+  "authors": [ "Dusan Janosik" ],
+  "owners": [ "djanosik" ],
+  "projectUrl": "https://github.com/djanosik/Moon.Localization",
+  "iconUrl": "http://moontea.net/moon.png",
+  "description": "Simple localization for .NET / DNX applications.",
+  "tags": [ "moontea", "localization" ],
 
-    "dependencies": {
-        "Moon.Collections": "1.0.7",
-        "Moon.IO.FileSystem": "1.0.7"
-    },
+  "dependencies": {
+    "Moon.Collections": "1.1.2",
+    "Moon.IO.FileSystem": "1.1.2",
+    "System.Globalization": "4.0.10",
+    "System.Collections.Concurrent": "4.0.10"
+  },
 
-    "frameworks": {
-        "net451": { },
-        "dnx451": { },
-        "dnxcore50": {
-            "dependencies": {
-                "System.Globalization": "4.0.10-beta-22816",
-                "System.Collections.Concurrent": "4.0.10-beta-22816"
-            }
-        }
-    }
+  "frameworks": {
+    "dotnet": { }
+  }
 }

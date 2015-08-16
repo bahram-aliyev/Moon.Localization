@@ -3,15 +3,15 @@
     "webroot": "wwwroot",
 
     "dependencies": {
-        "Microsoft.AspNet.Mvc": "6.0.0-beta4",
-        "Microsoft.AspNet.Server.IIS": "1.0.0-beta4",
+        "Microsoft.AspNet.Mvc": "6.0.0-beta6",
+        "Microsoft.AspNet.Server.IIS": "1.0.0-beta6",
         "Moon.AspNet.Localization": "1.0.0-ci",
         "Moon.Localization.Xml": "1.0.0-ci",
         "Moon.Localization.Json": "1.0.0-ci"
     },
 
     "frameworks": {
-        "dnx451": { },
+        "dnx46": { },
         "dnxcore50": { }
     },
 

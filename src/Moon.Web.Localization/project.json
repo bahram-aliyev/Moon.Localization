@@ -1,22 +1,24 @@
 {
-    "version": "1.0.0-ci",
-    "authors": [ "Dusan Janosik" ],
-    "owners": [ "djanosik" ],
-    "projectUrl": "https://github.com/djanosik/Moon.Localization",
-    "iconUrl": "http://moontea.net/moon.png",
-    "description": "Simple localization for ASP.NET IIS applications.",
-    "tags": [ "moontea", "localization", "aspnet", "web" ],
+  "version": "1.0.0-ci",
+  "authors": [ "Dusan Janosik" ],
+  "owners": [ "djanosik" ],
+  "projectUrl": "https://github.com/djanosik/Moon.Localization",
+  "iconUrl": "http://moontea.net/moon.png",
+  "description": "Simple localization for ASP.NET IIS applications.",
+  "tags": [ "moontea", "localization", "aspnet", "web" ],
 
-    "dependencies": {
-        "Newtonsoft.Json": "6.0.8",
-        "Moon.Localization": "1.0.0-ci"
-    },
+  "dependencies": {
+    "Newtonsoft.Json": "7.0.1",
+    "Moon.Localization": "1.0.0-ci"
+  },
 
-    "frameworks": {
-        "net451": {
-            "frameworkAssemblies": {
-                "System.Web": "4.0.0.0"
-            }
-        }
+  "frameworks": {
+    "net46": {
+      "frameworkAssemblies": {
+        "System.Runtime": "4.0.20.0",
+        "System.Globalization": "4.0.10.0",
+        "System.Web": "4.0.0.0"
+      }
     }
+  }
 }
