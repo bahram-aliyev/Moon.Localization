@@ -16,7 +16,6 @@ namespace Moon.Owin.Localization
         const string cookieName = "Current-Culture";
 
         readonly OwinMiddleware next;
-        readonly Action<DictionaryLoader> loader;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CultureMiddleware" /> class
@@ -27,7 +26,8 @@ namespace Moon.Owin.Localization
             : base(next)
         {
             this.next = next;
-            this.loader = loader;
+
+            loader(new DictionaryLoader(GetWebRootPath()));
         }
 
         /// <summary>
@@ -36,8 +36,6 @@ namespace Moon.Owin.Localization
         /// <param name="context">The OWIN context.</param>
         public override async Task Invoke(IOwinContext context)
         {
-            loader(new DictionaryLoader(GetWebRootPath()));
-
             var culture = GetRequestedCulture(context);
 
             if (culture != null)

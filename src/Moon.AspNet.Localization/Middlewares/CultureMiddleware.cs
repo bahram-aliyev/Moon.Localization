@@ -18,28 +18,26 @@ namespace Moon.AspNet.Localization
         const string cookieName = "Current-Culture";
 
         readonly RequestDelegate next;
-        readonly Action<DictionaryLoader> loader;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CultureMiddleware" /> class
         /// </summary>
         /// <param name="next">The next middleware.</param>
+        /// <param name="env">The hosting environment.</param>
         /// <param name="loader">The dictionary loader.</param>
-        public CultureMiddleware(RequestDelegate next, Action<DictionaryLoader> loader)
+        public CultureMiddleware(RequestDelegate next, IHostingEnvironment env, Action<DictionaryLoader> loader)
         {
             this.next = next;
-            this.loader = loader;
+
+            loader(new DictionaryLoader(env.WebRootPath));
         }
 
         /// <summary>
         /// Processes a requests and sets the current culture.
         /// </summary>
         /// <param name="context">The HTTP context.</param>
-        /// <param name="env">The hosting environment.</param>
-        public async Task Invoke(HttpContext context, IHostingEnvironment env)
+        public async Task Invoke(HttpContext context)
         {
-            loader(new DictionaryLoader(env.WebRootPath));
-
             var culture = GetRequestedCulture(context);
 
             if (culture != null)
