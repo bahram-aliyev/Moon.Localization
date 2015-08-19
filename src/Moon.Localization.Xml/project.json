@@ -8,11 +8,26 @@
   "tags": [ "moontea", "localization", "xml" ],
 
   "dependencies": {
-    "Moon.Localization": "1.0.0-ci",
-    "System.Xml.XDocument": "4.0.10"
+    "Moon.Localization": "1.0.0-ci"
   },
 
   "frameworks": {
-    "dotnet": { }
+    "net451": {
+      "frameworkAssemblies": {
+        "System.Xml": "4.0.0.0",
+        "System.Xml.Linq": "4.0.0.0"
+      }
+    },
+    "dnx451": {
+      "frameworkAssemblies": {
+        "System.Xml": "4.0.0.0",
+        "System.Xml.Linq": "4.0.0.0"
+      }
+    },
+    "dotnet": {
+      "dependencies": {
+        "System.Xml.XDocument": "4.0.10"
+      }
+    }
   }
 }

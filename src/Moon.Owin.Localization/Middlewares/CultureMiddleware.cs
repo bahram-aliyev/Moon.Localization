@@ -26,7 +26,7 @@ namespace Moon.Owin.Localization
             : base(next)
         {
             this.next = next;
-
+            
             loader(new DictionaryLoader(GetWebRootPath()));
         }
 

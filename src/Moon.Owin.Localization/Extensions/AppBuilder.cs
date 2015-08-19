@@ -29,7 +29,7 @@ namespace Owin
         {
             Requires.NotNull(scriptPath, nameof(scriptPath));
             Requires.NotNull(loader, nameof(loader));
-
+            
             return app
                 .Use<CultureMiddleware>(loader)
                 .Map(scriptPath, m =>

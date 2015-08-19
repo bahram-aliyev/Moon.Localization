@@ -9,11 +9,6 @@
     "test": "xunit.runner.dnx"
   },
   "frameworks": {
-    "dnx46": {
-      "frameworkAssemblies": {
-        "System.Runtime": "4.0.20.0",
-        "System.Globalization": "4.0.10.0"
-      }
-    }
+    "dnx451": { }
   }
 }
