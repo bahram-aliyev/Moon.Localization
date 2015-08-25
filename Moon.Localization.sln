@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Moon.Localization", "src\Moon.Localization\Moon.Localization.xproj", "{2A565A3B-3A8F-4910-8894-ED6FEDD9B755}"
 EndProject
@@ -12,8 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "global", "global", "{BB3833
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		appveyor.yml = appveyor.yml
-		build.cmd = build.cmd
-		build.fsx = build.fsx
+		fake.cmd = fake.cmd
+		fake.fsx = fake.fsx
 		global.json = global.json
 		LICENSE = LICENSE
 		README.md = README.md
