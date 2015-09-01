@@ -8,17 +8,12 @@
   "tags": [ "moontea", "localization", "aspnet", "web", "owin" ],
 
   "dependencies": {
-    "Newtonsoft.Json": "7.0.1",
+    "Microsoft.Owin": "3.0.1",
     "Moon.Localization": "1.0.0-ci",
-    "Microsoft.Owin": "3.0.1"
+    "Newtonsoft.Json": "7.0.1"
   },
 
   "frameworks": {
-    "net451": {
-      "frameworkAssemblies": {
-        "System.Runtime": "4.0.10.0",
-        "System.Globalization": "4.0.0.0"
-      }
-    }
+    "net451": { }
   }
 }

@@ -8,15 +8,13 @@
   "tags": [ "moontea", "localization", "aspnet", "web" ],
 
   "dependencies": {
-    "Newtonsoft.Json": "7.0.1",
-    "Moon.Localization": "1.0.0-ci"
+    "Moon.Localization": "1.0.0-ci",
+    "Newtonsoft.Json": "7.0.1"
   },
 
   "frameworks": {
     "net451": {
       "frameworkAssemblies": {
-        "System.Runtime": "4.0.10.0",
-        "System.Globalization": "4.0.0.0",
         "System.Web": "4.0.0.0"
       }
     }

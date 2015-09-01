@@ -8,8 +8,8 @@
   "tags": [ "moontea", "localization", "json" ],
 
   "dependencies": {
-    "Newtonsoft.Json": "7.0.1",
-    "Moon.Localization": "1.0.0-ci"
+    "Moon.Localization": "1.0.0-ci",
+    "Newtonsoft.Json": "7.0.1"
   },
 
   "frameworks": {

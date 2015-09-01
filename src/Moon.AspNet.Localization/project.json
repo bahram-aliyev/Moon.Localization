@@ -8,7 +8,7 @@
   "tags": [ "moontea", "localization", "aspnet", "web" ],
 
   "dependencies": {
-    "Moon.AspNet": "1.1.5",
+    "Moon.AspNet": "1.2.1",
     "Moon.Localization": "1.0.0-ci"
   },
 

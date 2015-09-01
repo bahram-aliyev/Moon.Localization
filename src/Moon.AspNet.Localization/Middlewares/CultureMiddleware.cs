@@ -18,26 +18,28 @@ namespace Moon.AspNet.Localization
         const string cookieName = "Current-Culture";
 
         readonly RequestDelegate next;
+        Action<DictionaryLoader> loader;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CultureMiddleware" /> class
         /// </summary>
         /// <param name="next">The next middleware.</param>
-        /// <param name="env">The hosting environment.</param>
         /// <param name="loader">The dictionary loader.</param>
-        public CultureMiddleware(RequestDelegate next, IHostingEnvironment env, Action<DictionaryLoader> loader)
+        public CultureMiddleware(RequestDelegate next, Action<DictionaryLoader> loader)
         {
             this.next = next;
-
-            loader(new DictionaryLoader(env.WebRootPath));
+            this.loader = loader;
         }
 
         /// <summary>
         /// Processes a requests and sets the current culture.
         /// </summary>
         /// <param name="context">The HTTP context.</param>
-        public async Task Invoke(HttpContext context)
+        /// <param name="host">The hosting environment.</param>
+        public async Task Invoke(HttpContext context, IHostingEnvironment host)
         {
+            LoadDictionaries(host);
+
             var culture = GetRequestedCulture(context);
 
             if (culture != null)
@@ -46,6 +48,21 @@ namespace Moon.AspNet.Localization
             }
 
             await next(context);
+        }
+
+        void LoadDictionaries(IHostingEnvironment host)
+        {
+            var isDevelopment = host.IsDevelopment();
+
+            if (loader != null)
+            {
+                loader(new DictionaryLoader(host.WebRootPath));
+
+                if (!host.IsDevelopment())
+                {
+                    loader = null;
+                }
+            }
         }
 
         CultureInfo GetRequestedCulture(HttpContext context)
