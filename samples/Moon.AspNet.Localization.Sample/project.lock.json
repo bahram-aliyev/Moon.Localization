@@ -2638,9 +2638,9 @@
           "lib/DNXCore50/System.Diagnostics.Process.dll": {}
         }
       },
-      "System.Diagnostics.Tools/4.0.0-beta-23109": {
+      "System.Diagnostics.Tools/4.0.0": {
         "dependencies": {
-          "System.Runtime": "4.0.0-beta-23109"
+          "System.Runtime": "4.0.0"
         },
         "compile": {
           "ref/dotnet/System.Diagnostics.Tools.dll": {}
@@ -4996,9 +4996,9 @@
         "System.Diagnostics.Process.nuspec"
       ]
     },
-    "System.Diagnostics.Tools/4.0.0-beta-23109": {
+    "System.Diagnostics.Tools/4.0.0": {
       "serviceable": true,
-      "sha512": "xJ35u8Z+UvepCNefKZEmtrnVfooyRL6/VIigu/IUOMr98W4O7ohLuQc2yMRHRxl4whzD0JNUgGV+Fsgal4o4mQ==",
+      "sha512": "uw5Qi2u5Cgtv4xv3+8DeB63iaprPcaEHfpeJqlJiLjIVy6v0La4ahJ6VW9oPbJNIjcavd24LKq0ctT9ssuQXsw==",
       "files": [
         "lib/DNXCore50/System.Diagnostics.Tools.dll",
         "lib/net45/_._",
@@ -5024,8 +5024,8 @@
         "ref/wp80/_._",
         "ref/wpa81/_._",
         "runtimes/win8-aot/lib/netcore50/System.Diagnostics.Tools.dll",
-        "System.Diagnostics.Tools.4.0.0-beta-23109.nupkg",
-        "System.Diagnostics.Tools.4.0.0-beta-23109.nupkg.sha512",
+        "System.Diagnostics.Tools.4.0.0.nupkg",
+        "System.Diagnostics.Tools.4.0.0.nupkg.sha512",
         "System.Diagnostics.Tools.nuspec"
       ]
     },

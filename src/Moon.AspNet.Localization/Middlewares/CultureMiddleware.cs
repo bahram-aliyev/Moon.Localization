@@ -52,8 +52,6 @@ namespace Moon.AspNet.Localization
 
         void LoadDictionaries(IHostingEnvironment host)
         {
-            var isDevelopment = host.IsDevelopment();
-
             if (loader != null)
             {
                 loader(new DictionaryLoader(host.WebRootPath));

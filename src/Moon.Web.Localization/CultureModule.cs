@@ -28,6 +28,7 @@ namespace Moon.Web.Localization
         /// </summary>
         public void Dispose()
         {
+            // NOOP
         }
 
         void BeginRequest(object sender, EventArgs args)
