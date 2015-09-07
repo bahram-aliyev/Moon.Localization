@@ -38,8 +38,8 @@ namespace Moon.Localization
 
         /// <summary>
         /// Gets the culture of the dictionary we will load resources from. It's equal to either
-        /// <see cref="CultureInfo.CurrentUICulture" />, its <see cref="CultureInfo.Parent" /> or
-        /// the <see cref="DefaultCulture" />.
+        /// <see cref="CultureInfo.CurrentUICulture" />, <see cref="DefaultCulture" /> or one of
+        /// their <see cref="CultureInfo.Parent" /> cultures.
         /// </summary>
         public static CultureInfo CurrentCulture
         {
@@ -55,6 +55,11 @@ namespace Moon.Localization
                 if (!dictionaries.ContainsKey(culture))
                 {
                     culture = defaultCulture;
+                }
+
+                if (!dictionaries.ContainsKey(culture))
+                {
+                    culture = culture.Parent;
                 }
 
                 return culture;
