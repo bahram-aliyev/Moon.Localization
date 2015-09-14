@@ -2,7 +2,7 @@
   "locked": false,
   "version": 1,
   "targets": {
-    "DNX,Version=v4.6": {
+    "DNX,Version=v4.5.1": {
       "Microsoft.AspNet.Antiforgery/1.0.0-beta7": {
         "type": "package",
         "dependencies": {
@@ -6603,7 +6603,7 @@
       "Moon.Localization.Xml >= 1.0.0-ci",
       "Moon.Localization.Json >= 1.0.0-ci"
     ],
-    "DNX,Version=v4.6": [],
+    "DNX,Version=v4.5.1": [],
     "DNXCore,Version=v5.0": []
   }
 }
