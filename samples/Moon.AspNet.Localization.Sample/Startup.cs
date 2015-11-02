@@ -13,6 +13,8 @@ namespace Moon.AspNet.Localization.Sample
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseIISPlatformHandler();
+
             app.UseLocalization(r => r
                 .LoadJson("resources")
                 .LoadXml("resources"));

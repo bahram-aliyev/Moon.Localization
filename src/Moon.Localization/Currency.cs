@@ -60,7 +60,7 @@ namespace Moon.Localization
         public static string GetSymbol(string currencyCode)
         {
             Requires.NotNull(currencyCode, nameof(currencyCode));
-
+            
             if (!cultureMap.ContainsKey(currencyCode))
             {
                 return currencyCode.ToUpper();

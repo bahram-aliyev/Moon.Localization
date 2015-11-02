@@ -26,7 +26,7 @@
     },
     "dotnet": {
       "dependencies": {
-        "System.Xml.XDocument": "4.0.11-beta-23225"
+        "System.Xml.XDocument": "4.0.11-beta-23409"
       }
     }
   }

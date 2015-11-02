@@ -77,7 +77,7 @@ namespace Moon.AspNet.Localization
             if (headers.ContainsKey(headerName))
             {
                 var header = headers[headerName];
-                var cultureName = header.Split(' ', ',', ';')[0];
+                var cultureName = header[0].Split(' ', ',', ';')[0];
                 return new CultureInfo(cultureName);
             }
 
