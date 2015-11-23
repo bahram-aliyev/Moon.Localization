@@ -8,12 +8,12 @@
   "tags": [ "moontea", "localization", "aspnet", "web" ],
 
   "dependencies": {
-    "Moon.AspNet": "1.2.9",
+    "Moon.AspNet": "1.2.13",
     "Moon.Localization": "1.0.0-ci"
   },
 
   "frameworks": {
-    "dnx451": { },
-    "dnxcore50": { }
+    "net451": { },
+    "dotnet5.4": { }
   }
 }

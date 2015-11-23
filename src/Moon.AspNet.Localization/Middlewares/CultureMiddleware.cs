@@ -89,7 +89,7 @@ namespace Moon.AspNet.Localization
             CultureInfo.DefaultThreadCurrentCulture = culture;
             CultureInfo.DefaultThreadCurrentUICulture = culture;
 
-#if DNXCORE50
+#if DOTNET5_4
             CultureInfo.CurrentCulture = culture;
             CultureInfo.CurrentUICulture = culture;
 #else

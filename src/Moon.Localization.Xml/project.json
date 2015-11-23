@@ -18,15 +18,9 @@
         "System.Xml.Linq": "4.0.0.0"
       }
     },
-    "dnx451": {
-      "frameworkAssemblies": {
-        "System.Xml": "4.0.0.0",
-        "System.Xml.Linq": "4.0.0.0"
-      }
-    },
-    "dotnet": {
+    "dotnet5.4": {
       "dependencies": {
-        "System.Xml.XDocument": "4.0.11-beta-23409"
+        "System.Xml.XDocument": "4.0.11-*"
       }
     }
   }

@@ -3,9 +3,9 @@
   "webroot": "wwwroot",
 
   "dependencies": {
-    "Microsoft.AspNet.Mvc": "6.0.0-beta8",
-    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-beta8",
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta8",
+    "Microsoft.AspNet.Mvc": "6.0.0-*",
+    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-*",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-*",
     "Moon.AspNet.Localization": "1.0.0-ci",
     "Moon.Localization.Xml": "1.0.0-ci",
     "Moon.Localization.Json": "1.0.0-ci"
