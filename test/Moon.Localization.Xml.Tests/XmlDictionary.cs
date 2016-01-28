@@ -1,35 +1,51 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using FluentAssertions;
+using Moon.Testing;
 using Xunit;
 
 namespace Moon.Localization.Xml.Tests
 {
-    public class XmlDictionaryTests
+    public class XmlDictionaryTests : TestSetup
     {
+        FileStream stream;
+        XmlDictionary dictionary;
+        Action action;
+
         [Fact]
-        public void Load_ForDictionaryWithMissingCulture_ThrowsException()
+        public void LoadDictionaryWithMissingCulture()
         {
-            using (var stream = File.OpenRead("Dictionaries/MissingCulture.xml"))
-            {
-                var exception = Assert.Throws<Exception>(() => XmlDictionary.Load(stream));
-                Assert.Equal("The target culture could not be read form the dictionary.", exception.Message);
-            }
+            "Given the file"
+                .x(() => stream = Use(File.OpenRead("Dictionaries/MissingCulture.xml")));
+
+            "When I execute the Load action"
+                .x(() => action = () => XmlDictionary.Load(stream));
+
+            "Then it should throw an exception"
+                .x(() =>
+                {
+                    action.ShouldThrow<Exception>().WithMessage("The target culture could not be read form the dictionary.");
+                });
         }
 
         [Fact]
-        public void Load_ForCorrectDictionary_LoadsValues()
+        public void LoadDictionary()
         {
-            using (var stream = File.OpenRead("Dictionaries/Correct.xml"))
-            {
-                var culture = new CultureInfo("en");
-                var dictionary = XmlDictionary.Load(stream);
+            "Given the file"
+                .x(() => stream = Use(File.OpenRead("Dictionaries/Correct.xml")));
 
-                Assert.Equal(culture, dictionary.Culture);
-                Assert.Equal("Application Title", dictionary.Values["Title"]);
-                Assert.Equal("Not supported", dictionary.Values["Search:NotSupported"]);
-                Assert.Equal("Search", dictionary.Values["Search:Label"]);
-            }
+            "When I load the JSON dictionary"
+                .x(() => dictionary = XmlDictionary.Load(stream));
+
+            "Then it should be loaded correctly"
+                .x(() =>
+                {
+                    dictionary.Culture.Should().Be(new CultureInfo("en"));
+                    dictionary.Values["Title"].Should().Be("Application Title");
+                    dictionary.Values["Search:NotSupported"].Should().Be("Not supported");
+                    dictionary.Values["Search:Label"].Should().Be("Search");
+                });
         }
     }
 }

@@ -8,12 +8,12 @@
   "tags": [ "moontea", "localization" ],
 
   "dependencies": {
-    "Moon.Collections": "1.2.4",
-    "Moon.IO.FileSystem": "1.2.4"
+    "Moon.Collections": "2.0.1",
+    "Moon.IO.FileSystem": "2.0.1"
   },
 
   "frameworks": {
-    "net451": { },
+    "net46": { },
     "dotnet5.4": {
       "dependencies": {
         "System.Collections.Concurrent": "4.0.11-*",

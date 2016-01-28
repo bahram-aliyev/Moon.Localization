@@ -1,65 +1,99 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using FluentAssertions;
+using Moon.Testing;
 using Xunit;
 
 namespace Moon.Localization.Json.Tests
 {
-    public class JsonDictionaryTests
+    public class JsonDictionaryTests : TestSetup
     {
+        FileStream stream;
+        JsonDictionary dictionary;
+        Action action;
+
         [Fact]
-        public void Load_ForJsonWithArrayAsRoot_ThrowsException()
+        public void LoadingJsonWithArrayAsRoot()
         {
-            using (var stream = File.OpenRead("Dictionaries/ArrayAsRoot.json"))
-            {
-                var exception = Assert.Throws<FormatException>(() => JsonDictionary.Load(stream));
-                Assert.StartsWith("Only an object can be the root.", exception.Message);
-            }
+            "Given the file"
+                .x(() => stream = Use(File.OpenRead("Dictionaries/ArrayAsRoot.json")));
+
+            "When I execute the Load action"
+                .x(() => action = () => JsonDictionary.Load(stream));
+
+            "Then it should throw an exception"
+                .x(() =>
+                {
+                    action.ShouldThrow<FormatException>().WithMessage("Only an object can be the root. Path '', line 1 position 1.");
+                });
         }
 
         [Fact]
-        public void Load_ForJsonWithUnexpectedEnd_ThrowsException()
+        public void LoadingJsonWithUnexpectedEnd()
         {
-            using (var stream = File.OpenRead("Dictionaries/UnexpectedEnd.json"))
-            {
-                var exception = Assert.Throws<FormatException>(() => JsonDictionary.Load(stream));
-                Assert.StartsWith("Unexpected end when parsing JSON.", exception.Message);
-            }
+            "Given the file"
+                .x(() => stream = Use(File.OpenRead("Dictionaries/UnexpectedEnd.json")));
+
+            "When I execute the Load action"
+                .x(() => action = () => JsonDictionary.Load(stream));
+
+            "Then it should throw an exception"
+                .x(() =>
+                {
+                    action.ShouldThrow<FormatException>().WithMessage("Unexpected end when parsing JSON. Path 'Title', line 4 position 32.");
+                });
         }
 
         [Fact]
-        public void Load_ForJsonWithUnknownToken_ThrowsException()
+        public void LoadingJsonWithUnknownToken()
         {
-            using (var stream = File.OpenRead("Dictionaries/UnknownToken.json"))
-            {
-                var exception = Assert.Throws<FormatException>(() => JsonDictionary.Load(stream));
-                Assert.StartsWith("Unsupported JSON token", exception.Message);
-            }
+            "Given the file"
+                .x(() => stream = Use(File.OpenRead("Dictionaries/UnknownToken.json")));
+
+            "When I execute the Load action"
+                .x(() => action = () => JsonDictionary.Load(stream));
+
+            "Then it should throw an exception"
+                .x(() =>
+                {
+                    action.ShouldThrow<FormatException>().WithMessage("Unsupported JSON token 'StartArray' was found. Path 'Search', line 6 position 15.");
+                });
         }
 
         [Fact]
-        public void Load_ForDictionaryWithMissingCulture_ThrowsException()
+        public void LoadingDictionaryWithMissingCulture()
         {
-            using (var stream = File.OpenRead("Dictionaries/MissingCulture.json"))
-            {
-                var exception = Assert.Throws<Exception>(() => JsonDictionary.Load(stream));
-                Assert.Equal("The target culture could not be read form the dictionary.", exception.Message);
-            }
+            "Given the file"
+                .x(() => stream = Use(File.OpenRead("Dictionaries/MissingCulture.json")));
+
+            "When I execute the Load action"
+                .x(() => action = () => JsonDictionary.Load(stream));
+
+            "Then it should throw an exception"
+                .x(() =>
+                {
+                    action.ShouldThrow<Exception>().WithMessage("The target culture could not be read form the dictionary.");
+                });
         }
 
         [Fact]
-        public void Load_ForCorrectDictionary_LoadsValues()
+        public void LoadingDictionary()
         {
-            using (var stream = File.OpenRead("Dictionaries/Correct.json"))
-            {
-                var culture = new CultureInfo("en");
-                var dictionary = JsonDictionary.Load(stream);
+            "Given the file"
+                .x(() => stream = Use(File.OpenRead("Dictionaries/Correct.json")));
 
-                Assert.Equal(culture, dictionary.Culture);
-                Assert.Equal("Application Title", dictionary.Values["Title"]);
-                Assert.Equal("Not supported", dictionary.Values["Search:NotSupported"]);
-                Assert.Equal("Search", dictionary.Values["Search:Label"]);
-            }
+            "When I load the JSON dictionary"
+                .x(() => dictionary = JsonDictionary.Load(stream));
+
+            "Then it should be loaded correctly"
+                .x(() =>
+                {
+                    dictionary.Culture.Should().Be(new CultureInfo("en"));
+                    dictionary.Values["Title"].Should().Be("Application Title");
+                    dictionary.Values["Search:NotSupported"].Should().Be("Not supported");
+                    dictionary.Values["Search:Label"].Should().Be("Search");
+                });
         }
     }
 }
